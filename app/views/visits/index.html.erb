@@ -1,0 +1,12 @@
+<%= link_to "click here to view file", pdfjs.full_path(file: "random.pdf") %>
+	
+<script>
+
+document.addEventListener('pagechange', function(e) {
+  if (e.pageNumber !== e.previousPageNumber) {
+    console.log('page changed from ' + e.previousPageNumber + ' to ' + e.pageNumber);
+  }
+  // console.log(e.pageNumber);
+  // console.log(e.previousPageNumber);
+});
+</script>
